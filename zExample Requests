@@ -1,0 +1,15 @@
+RestClient.post(
+  'https://ACf873c4d67ab715c3b70a80d6ea262317:d475ae585262804bc8f171f61ea1da8f@api.twilio.com/2010-04-01/Accounts/ACf873c4d67ab715c3b70a80d6ea262317/Messages.json',
+  :Body => 'Hello World',
+  :From => '9739474550',
+  :To => '9713365478')
+
+response = RestClient::Request.new(
+    :method => :post,
+    :url => 'https://api.twilio.com/2010-04-01/Accounts/ACf873c4d67ab715c3b70a80d6ea262317/Messages.json',
+    :user => 'ACf873c4d67ab715c3b70a80d6ea262317',
+    :password => 'd475ae585262804bc8f171f61ea1da8f',
+    :payload => { :Body => 'This sucks',
+                  :From => '9739474550',
+                  :To => '9713365478' }
+  ).execute
